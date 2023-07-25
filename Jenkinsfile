@@ -18,10 +18,7 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build(DOCKER_IMAGE_NAME)
-                    app.inside {
-                        sh 'echo Hello, World!'
-                    }
+                    app = docker.build(DOCKER_IMAGE_NAME)                    
                 }
             }
         }
